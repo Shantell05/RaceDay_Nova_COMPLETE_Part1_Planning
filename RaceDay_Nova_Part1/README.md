@@ -43,6 +43,9 @@ The model contains seven entities: Users, Events, Categories, EventCategories, E
 - An enrolment can have zero or one result.
 - An event can have many weather snapshots.
 
+  <img width="1572" height="747" alt="RaceDay_Nova_ERD" src="https://github.com/user-attachments/assets/2a5cf10e-c5c8-4c8d-88ed-59067755ee43" />
+
+
 ## SQL Server / SSMS
 
 1. Open `docs/RaceDay_Nova_Database.sql` in SQL Server Management Studio.
