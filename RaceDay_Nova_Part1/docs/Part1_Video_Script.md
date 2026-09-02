@@ -21,4 +21,4 @@ Run the complete script and show successful output. Then show the verification q
 Finally, I will show the repository structure, the docs folder and the GitHub Actions workflow. The workflow validates the required Part 1 files. I will also show my own meaningful commit history and the successful green workflow run.
 
 ## 7. Closing
-This concludes my RaceDay Nova Part 1 demonstration. The database and API plan provide the foundation for Part 2, where the RESTful API will be implemented in C#.”
+This concludes my RaceDay Nova Part 1 demonstration. The database and API plan provide the foundation for Part 2, where the RESTful API will be implemented in C#.
