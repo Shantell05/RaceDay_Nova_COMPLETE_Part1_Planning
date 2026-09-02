@@ -1,4 +1,4 @@
-digraph RaceDayNovaERD {
+ digraph RaceDayNovaERD {
   graph [rankdir=LR, bgcolor="white", pad=0.2, nodesep=0.45, ranksep=0.8];
   node [shape=plain, fontname="Arial"];
   edge [fontname="Arial", fontsize=9];
