@@ -1,7 +1,5 @@
 # Part 1 – 20 Meaningful Commit Plan
 
-Make these commits yourself on your own GitHub account. Do not fabricate timestamps or screenshots.
-
 1. Updated Video Script
 2. Update RaceDay_Nova_ERD.dot
 3. Add Part 1 documentation structure.
