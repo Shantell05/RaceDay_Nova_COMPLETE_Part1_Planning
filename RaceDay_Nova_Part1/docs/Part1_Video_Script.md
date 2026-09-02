@@ -1,4 +1,4 @@
-# RaceDay Nova – Part 1 Video Presentation Script
+ # RaceDay Nova – Part 1 Video Presentation Script
 
 ## 1. Introduction
 Hello, my name is Shantell Mlatjie. This video demonstrates my RaceDay Nova Part 1 planning submission for PROG6212 Programming 2B. Part 1 focuses on the system design, REST API planning, SQL Server database and GitHub workflow.
