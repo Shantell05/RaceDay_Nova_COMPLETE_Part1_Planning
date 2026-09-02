@@ -1,4 +1,4 @@
-/*
+ /*
  RaceDay Nova - Part 1 Database
  PROG6212 Programming 2B
  SQL Server / SSMS
