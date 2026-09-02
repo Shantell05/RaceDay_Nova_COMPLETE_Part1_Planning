@@ -2,8 +2,8 @@
 
 Make these commits yourself on your own GitHub account. Do not fabricate timestamps or screenshots.
 
-1.Updated Video Script
-2. Initialise RaceDay Nova repository and README.
+1. Updated Video Script
+2. Update RaceDay_Nova_ERD.dot
 3. Add Part 1 documentation structure.
 4. Add first Users table design.
 5. Add Events table and organiser relationship.
