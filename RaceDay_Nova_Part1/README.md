@@ -62,8 +62,6 @@ The workflow validates that the required Part 1 evidence exists and performs bas
 
 ## Video
 
-Every part requires an unlisted YouTube video with the student's own voice. Do not use an AI-generated voice.
-
 **Part 1 video:** `REPLACE_WITH_YOUR_UNLISTED_YOUTUBE_LINK`
 
 ## Final submission checklist
