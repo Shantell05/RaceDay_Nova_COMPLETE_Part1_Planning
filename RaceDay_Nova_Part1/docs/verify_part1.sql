@@ -1,4 +1,4 @@
-USE RaceDayNovaDB;
+ USE RaceDayNovaDB;
 GO
 
 /* Quick relationship checks for SSMS demonstration. */
