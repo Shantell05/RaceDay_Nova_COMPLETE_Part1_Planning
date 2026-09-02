@@ -58,7 +58,7 @@ The script contains primary keys, foreign keys, `NOT NULL`, `UNIQUE`, `DEFAULT` 
 
 The workflow validates that the required Part 1 evidence exists and performs basic content checks on the SQL and API plan. Push the repository to your own GitHub account and show the resulting green workflow run in your README/evidence.
 
-**Important:** The assignment requires a minimum of 20 meaningful commits. The commit plan is provided as guidance; the actual commits must be made by the student and must reflect genuine work.
+ 
 
 ## Video
 
