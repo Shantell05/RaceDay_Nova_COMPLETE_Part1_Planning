@@ -1,7 +1,7 @@
  # RaceDay Nova – Part 1 Video Presentation Script
 
 ## 1. Introduction
-Hello, my name is Shantell Mlatjie. This video demonstrates my RaceDay Nova Part 1 planning submission for PROG6212 Programming 2B. Part 1 focuses on the system design, REST API planning, SQL Server database and GitHub workflow.
+Hello, my name is Shantell Malatjie. This video demonstrates my RaceDay Nova Part 1 planning submission for PROG6212 Programming 2B. Part 1 focuses on the system design, REST API planning, SQL Server database and GitHub workflow.
 
 ## 2. Explain the roles
 The system has two roles. Organisers can create, edit and delete events, manage categories, view enrolments and capture results. Participants can register, log in, browse events, select categories, view their own enrolments and track their results.
