@@ -1,0 +1,50 @@
+name: RaceDay Nova Part 1 Validation
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate-part1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate required Part 1 files
+        shell: bash
+        run: |
+          set -e
+          test -f README.md
+          test -f docs/RaceDay_Nova_ERD.png
+          test -f docs/RaceDay_Nova_Database.sql
+          test -f docs/RaceDay_Nova_API_Endpoint_Plan.md
+          test -f docs/Part1_Video_Script.md
+          test -f docs/20_Meaningful_Commits_Plan.md
+          test -f docs/Part1_Rubric_Traceability.md
+
+      - name: Validate SQL planning content
+        shell: bash
+        run: |
+          set -e
+          grep -qi "CREATE TABLE dbo.Users" docs/RaceDay_Nova_Database.sql
+          grep -qi "CREATE TABLE dbo.Events" docs/RaceDay_Nova_Database.sql
+          grep -qi "CREATE TABLE dbo.Categories" docs/RaceDay_Nova_Database.sql
+          grep -qi "CREATE TABLE dbo.EventCategories" docs/RaceDay_Nova_Database.sql
+          grep -qi "CREATE TABLE dbo.Enrolments" docs/RaceDay_Nova_Database.sql
+          grep -qi "CREATE TABLE dbo.Results" docs/RaceDay_Nova_Database.sql
+          grep -qi "CREATE TABLE dbo.EventWeatherSnapshots" docs/RaceDay_Nova_Database.sql
+          grep -qi "INSERT dbo.Users" docs/RaceDay_Nova_Database.sql
+          grep -qi "INSERT dbo.Events" docs/RaceDay_Nova_Database.sql
+          grep -qi "INSERT dbo.EventCategories" docs/RaceDay_Nova_Database.sql
+
+      - name: Validate API plan sections
+        shell: bash
+        run: |
+          set -e
+          grep -q "/api/auth/register" docs/RaceDay_Nova_API_Endpoint_Plan.md
+          grep -q "/api/auth/login" docs/RaceDay_Nova_API_Endpoint_Plan.md
+          grep -q "/api/events" docs/RaceDay_Nova_API_Endpoint_Plan.md
+          grep -q "/api/enrolments/me" docs/RaceDay_Nova_API_Endpoint_Plan.md
+          grep -q "/api/results/me" docs/RaceDay_Nova_API_Endpoint_Plan.md
+          grep -q "/api/events/{id}/weather" docs/RaceDay_Nova_API_Endpoint_Plan.md

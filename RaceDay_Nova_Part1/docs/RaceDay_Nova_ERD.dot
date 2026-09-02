@@ -1,0 +1,60 @@
+digraph RaceDayNovaERD {
+  graph [rankdir=LR, bgcolor="white", pad=0.2, nodesep=0.45, ranksep=0.8];
+  node [shape=plain, fontname="Arial"];
+  edge [fontname="Arial", fontsize=9];
+
+  Users [label=<
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0">
+      <TR><TD BGCOLOR="#d9eaf7"><B>Users</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><B>PK</B> UserId</TD></TR>
+      <TR><TD ALIGN="LEFT">FirstName</TD></TR><TR><TD ALIGN="LEFT">LastName</TD></TR>
+      <TR><TD ALIGN="LEFT">Email (UNIQUE)</TD></TR><TR><TD ALIGN="LEFT">PasswordHash</TD></TR>
+      <TR><TD ALIGN="LEFT">Mobile</TD></TR><TR><TD ALIGN="LEFT">UserRole</TD></TR><TR><TD ALIGN="LEFT">CreatedOn</TD></TR>
+    </TABLE>>];
+  Events [label=<
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0">
+      <TR><TD BGCOLOR="#d9eaf7"><B>Events</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><B>PK</B> EventId</TD></TR><TR><TD ALIGN="LEFT"><B>FK</B> OrganiserId</TD></TR>
+      <TR><TD ALIGN="LEFT">EventName</TD></TR><TR><TD ALIGN="LEFT">EventType</TD></TR><TR><TD ALIGN="LEFT">EventDate</TD></TR>
+      <TR><TD ALIGN="LEFT">StartTime</TD></TR><TR><TD ALIGN="LEFT">Venue / City / Province</TD></TR>
+      <TR><TD ALIGN="LEFT">DistanceKm</TD></TR><TR><TD ALIGN="LEFT">Description</TD></TR><TR><TD ALIGN="LEFT">RouteReference</TD></TR><TR><TD ALIGN="LEFT">EventStatus</TD></TR>
+    </TABLE>>];
+  Categories [label=<
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0">
+      <TR><TD BGCOLOR="#d9eaf7"><B>Categories</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><B>PK</B> CategoryId</TD></TR><TR><TD ALIGN="LEFT">CategoryName (UNIQUE)</TD></TR>
+      <TR><TD ALIGN="LEFT">AgeFrom</TD></TR><TR><TD ALIGN="LEFT">AgeTo</TD></TR><TR><TD ALIGN="LEFT">CategoryNote</TD></TR>
+    </TABLE>>];
+  EventCategories [label=<
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0">
+      <TR><TD BGCOLOR="#d9eaf7"><B>EventCategories</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><B>PK</B> EventCategoryId</TD></TR><TR><TD ALIGN="LEFT"><B>FK</B> EventId</TD></TR><TR><TD ALIGN="LEFT"><B>FK</B> CategoryId</TD></TR>
+      <TR><TD ALIGN="LEFT">EntryFee</TD></TR><TR><TD ALIGN="LEFT">PlacesAvailable</TD></TR>
+    </TABLE>>];
+  Enrolments [label=<
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0">
+      <TR><TD BGCOLOR="#d9eaf7"><B>Enrolments</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><B>PK</B> EnrolmentId</TD></TR><TR><TD ALIGN="LEFT"><B>FK</B> ParticipantId</TD></TR><TR><TD ALIGN="LEFT"><B>FK</B> EventCategoryId</TD></TR>
+      <TR><TD ALIGN="LEFT">EnrolledOn</TD></TR><TR><TD ALIGN="LEFT">EnrolmentStatus</TD></TR>
+    </TABLE>>];
+  Results [label=<
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0">
+      <TR><TD BGCOLOR="#d9eaf7"><B>Results</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><B>PK</B> ResultId</TD></TR><TR><TD ALIGN="LEFT"><B>FK</B> EnrolmentId</TD></TR>
+      <TR><TD ALIGN="LEFT">PositionNo</TD></TR><TR><TD ALIGN="LEFT">FinishTime</TD></TR><TR><TD ALIGN="LEFT">PaceSecondsKm</TD></TR><TR><TD ALIGN="LEFT">ResultStatus</TD></TR><TR><TD ALIGN="LEFT">RecordedOn</TD></TR>
+    </TABLE>>];
+  Weather [label=<
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0">
+      <TR><TD BGCOLOR="#d9eaf7"><B>EventWeatherSnapshots</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><B>PK</B> WeatherSnapshotId</TD></TR><TR><TD ALIGN="LEFT"><B>FK</B> EventId</TD></TR>
+      <TR><TD ALIGN="LEFT">CheckedAt</TD></TR><TR><TD ALIGN="LEFT">TemperatureC</TD></TR><TR><TD ALIGN="LEFT">WindKph</TD></TR><TR><TD ALIGN="LEFT">RainChance</TD></TR><TR><TD ALIGN="LEFT">Summary</TD></TR><TR><TD ALIGN="LEFT">ProviderName</TD></TR>
+    </TABLE>>];
+
+  Users -> Events [label="organises 1 : M"];
+  Events -> EventCategories [label="offers 1 : M"];
+  Categories -> EventCategories [label="used by 1 : M"];
+  Users -> Enrolments [label="participant 1 : M"];
+  EventCategories -> Enrolments [label="receives 1 : M"];
+  Enrolments -> Results [label="has 1 : 0..1"];
+  Events -> Weather [label="has 1 : M"];
+}
