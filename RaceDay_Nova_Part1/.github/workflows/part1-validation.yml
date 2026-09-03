@@ -1,8 +1,20 @@
 name: RaceDay Nova Part 1 Validation
 
 on:
+   on:
   push:
+    paths:
+     - '.github/workflows/**'
+      - 'docs/**'
+      - 'README.md'
+     
   pull_request:
+    paths:
+    - '.github/workflows/**'
+      - 'docs/**'
+      - 'README.md'
+      
+  workflow_dispatch:
 
 jobs:
   validate-part1:
