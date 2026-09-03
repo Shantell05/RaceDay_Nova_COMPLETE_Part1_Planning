@@ -60,12 +60,23 @@ The script contains primary keys, foreign keys, `NOT NULL`, `UNIQUE`, `DEFAULT` 
 ## GitHub and CI/CD
 
 The workflow validates that the required Part 1 evidence exists and performs basic content checks on the SQL and API plan. Push the repository to your own GitHub account and show the resulting green workflow run in your README/evidence.
+<img width="1311" height="639" alt="BLANK" src="https://github.com/user-attachments/assets/aacc56fb-b3a3-476c-962a-6a9b1447095e" />
+<img width="1355" height="623" alt="VALID" src="https://github.com/user-attachments/assets/bf9b3bf8-33a8-4a74-b868-fecd983db1c4" />
+<img width="1335" height="567" alt="CI" src="https://github.com/user-attachments/assets/d34e98a6-51c7-497e-9fd2-e0e4f22cdb24" />
+
+
+
 
  
 
-## Video
+## Video YOUTUBE LINK
 
-**Part 1 video:** `REPLACE_WITH_YOUR_UNLISTED_YOUTUBE_LINK`
+**Part 1 video:** https://youtu.be/KsMqBe7p3sM?si=PWfNzfC0imJQRkJW
+
+## GitHub LINK
+
+https://github.com/Shantell05/RaceDay_Nova_COMPLETE_Part1_Planning/tree/master/RaceDay_Nova_Part1
+
 
 ## Final submission checklist
 
