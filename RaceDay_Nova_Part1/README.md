@@ -80,18 +80,18 @@ https://github.com/Shantell05/RaceDay_Nova_COMPLETE_Part1_Planning/tree/master/R
 
 ## Final submission checklist
 
-- [ ] Repository pushed to your own GitHub account.
-- [ ] `/docs` contains the ERD PNG.
-- [ ] `/docs` contains the endpoint plan.
-- [ ] `/docs` contains the SQL script.
-- [ ] SQL script tested successfully in SSMS.
-- [ ] Minimum 20 meaningful commits made using your own account.
-- [ ] GitHub Actions workflow is green.
-- [ ] Screenshot of the real green build added to evidence/README.
-- [ ] Own-voice Part 1 video recorded.
-- [ ] Video uploaded as unlisted to YouTube.
-- [ ] Real YouTube link added to README.
-- [ ] GitHub repository link submitted on ARC.
+-  Repository pushed to your own GitHub account.
+-  `/docs` contains the ERD PNG.
+-  `/docs` contains the endpoint plan.
+-  `/docs` contains the SQL script.
+-  SQL script tested successfully in SSMS.
+-  Minimum 20 meaningful commits made using your own account.
+-  GitHub Actions workflow is green.
+-  Screenshot of the real green build added to evidence/README.
+-  Own-voice Part 1 video recorded.
+-  Video uploaded as unlisted to YouTube.
+-  Real YouTube link added to README.
+- GitHub repository link submitted on ARC.
 
 
 ## Word Planning Document
